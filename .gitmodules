@@ -1,0 +1,6 @@
+[submodule "development/puppets"]
+	path = development/puppets
+	url = git@github.com:berlinonline/puppets.git
+[submodule "applications/fe/pulq"]
+	path = applications/fe/pulq
+	url = git@github.com:berlinonline/pulq.git
