@@ -10,7 +10,7 @@ $project_basedir = "${hosting_root}/showcase"
 # define our concrete box configuration
 class { 'boxes::devbox-php-elasticsearch': }
 -> showcase::application { 'pulq-showcase.local':
-    app_docroot => "${project_basedir}/applications/portal/pulq/pub"
+    app_docroot => "${project_basedir}/applications/fe/pulq/pub"
 }
 
 require converjon::server
