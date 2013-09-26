@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    THIS FILE REPLACES THE CONFIGURATION IN app/config/output_types.xml
-    IT IS NOT MERGED WITH IT.
--->
-<ae:configurations 
-    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" 
-    xmlns="http://agavi.org/agavi/config/parts/output_types/1.0" 
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://agavi.org/agavi/config/parts/output_types/1.0"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <ae:configuration context="web">
@@ -23,9 +19,9 @@
 
                         <!-- and then define those special tp this layout -->
                         <layer name="decorator">
-                            <slots>
+                            <!--<slots>
                                 <slot name="header" module="Common" action="Header" />
-                            </slots>
+                            </slots>-->
                             <ae:parameter name="directory">%core.template_dir%</ae:parameter>
                             <ae:parameter name="template">Master</ae:parameter>
                         </layer>
@@ -45,7 +41,7 @@
                     <ae:parameter name="Content-Type">text/html; charset=UTF-8</ae:parameter>
                 </ae:parameter>
             </output_type>
-            
+
             <!-- Output type for JSON data
             <output_type name="json">
                 <ae:parameter name="http_headers">
@@ -76,4 +72,5 @@
         </output_types>
     </ae:configuration>
 </ae:configurations>
+
 

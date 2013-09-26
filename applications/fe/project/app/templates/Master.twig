@@ -12,14 +12,18 @@
         <title>{{ _title }}</title>
         <base href="{{ ro.getBaseHref() }}" id="base_href"/>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-        <!-- GoogleMaps code - @todo get this sucker oughta here! -->
-        <!-- %%STYLESHEETS%% -->
+
+        <link rel="stylesheet" href="static/style.css" type="text/css" />
+
+        {% if ac("minify.js", false) %}
+            <script data-main="static/js/main-built" src="/static/require.js"></script>
+        {% else %}
+            <script data-main="static/js/main" src="/static/require.js"></script>
+        {% endif %}
     </head>
     <body>
-        {{ slots.header|raw }}
         {{ inner|raw }}
-        {{ slots.footer|raw }}
 
-        <!-- %%JAVASCRIPTS%% -->
     </body>
 </html>
+
