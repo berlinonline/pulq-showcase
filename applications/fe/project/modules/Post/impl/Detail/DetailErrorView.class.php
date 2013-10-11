@@ -6,7 +6,10 @@ class Post_Detail_DetailErrorView extends BaseView
 {
     public function executeHtml(AgaviRequestDataHolder $parameters)
     {
-        $this->setupHtml();
+        return $this->createForwardContainer(
+            AgaviConfig::get('actions.error_404_module'),
+            AgaviConfig::get('actions.error_404_action')
+        );
     }
 }
 

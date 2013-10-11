@@ -4,6 +4,7 @@ namespace Project\Post\Agavi\Validate;
 
 use Project\Post\PostService;
 use \AgaviValidator;
+use \Exception;
 
 class PostIdValidator extends AgaviValidator
 {
