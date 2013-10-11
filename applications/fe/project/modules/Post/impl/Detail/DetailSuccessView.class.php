@@ -10,6 +10,7 @@ class Post_Detail_DetailSuccessView extends BaseView
 
         $post = $parameters->getParameter('post');
 
+        $this->setAttribute('_title', $post->getTitle());
         $this->setAttribute('post', $post->toArray('detail'));
     }
 }
