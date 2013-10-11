@@ -19,13 +19,15 @@
 
         <settings>
             <!-- Change this to whatever you like to name your project -->
-            <setting name="app_name">Yet another Pulq application</setting>
+            <setting name="app_name">Pulq Showcase</setting>
             <setting name="project_prefix">pulq_showcase</setting>
             <!--
                  DBs are disabled by default to give you a working site
                  even without DBs being configured
             -->
             <setting name="use_database">true</setting>
+            <setting name="asset_directory">%core.pub_dir%/assets</setting>
+            <setting name="asset_url_path">assets</setting>
         </settings>
 
         <settings prefix="minify.">

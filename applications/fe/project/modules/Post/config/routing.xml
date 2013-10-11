@@ -3,7 +3,8 @@
     xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" 
     xmlns="http://agavi.org/agavi/config/parts/routing/1.0">
     <ae:configuration context="web">
-        <route name="post" pattern="post" module="Post">
+        <route name="post" pattern="/post" module="Post">
+            <route name=".detail" pattern="/(post:[\w-]+)" action="Detail" />
         </route>
     </ae:configuration>
 

@@ -1,1 +1,7 @@
-<h1>Post/Index - SuccessView</h1>
+<h1>{{ac('core.app_name')}}</h1>
+
+<ul>
+{% for post in posts %}
+    <li><a href="{{post.url}}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
