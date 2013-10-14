@@ -16,4 +16,9 @@ define showcase::application (
       group   => 'vagrant',
       content => template('showcase/init_fe.sh.erb');
   }
+
+  package { 'sass':
+    ensure   => 'installed',
+    provider => 'gem',
+  }
 }
