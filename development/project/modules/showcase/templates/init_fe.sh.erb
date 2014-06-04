@@ -1,5 +1,6 @@
 cd <%= hosting_root %>
-git clone git@github.com:berlinonline/pulq-showcase.git showcase
-cd showcase/applications/fe
-./configure-project.sh
+git clone git@github.com:berlinonline/pulq-showcase.git showcase --recursive
+cd showcase/applications/fe/pulq
+make install
+make db
 
