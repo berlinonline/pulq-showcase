@@ -30,6 +30,11 @@
             <setting name="asset_url_path">assets</setting>
         </settings>
 
+        <settings prefix="converjon.">
+            <setting name="enabled">true</setting>
+            <setting name="base_url">http://pulq-showcase.local:8000/</setting>
+        </settings>
+
         <settings prefix="minify.">
             <setting name="js">false</setting>
             <setting name="css">false</setting>

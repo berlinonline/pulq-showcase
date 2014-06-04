@@ -39,7 +39,7 @@ class Post extends BaseDataObject
     {
         $asset_service = new AssetService();
 
-        return $asset_service->getAssetUrlById($this->image);
+        
     }
 
     public function getUrl()

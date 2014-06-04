@@ -29,6 +29,9 @@
                     "index": "not_analyzed"
                 }
             }
+        },
+        "live": {
+            "type": "boolean"
         }
     }
 }
