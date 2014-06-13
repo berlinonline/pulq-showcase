@@ -1,0 +1,71 @@
+{
+    "name": "berlinonline/pulq-showcase",
+    "type": "project",
+    "description": "Agavi based framework for building frontend applications.",
+    "keywords": ["agavi", "mvc" , "frontend"],
+    "homepage": "https://github.com/berlinonline/pulq",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leon Weidauer"
+        }
+    ],
+
+    "autoload": {
+        "psr-0": {"Project" : "app/lib" }
+    },
+
+    "minimum-stability": "stable",
+
+    "require": {
+        "php": ">=5.3.3",
+        "agavi/agavi": "1.0.*",
+        "berlinonline/pulq": "dev-pulq-vendor"
+    },
+
+    "repositories": [
+        {
+            "url": "https://github.com/berlinonline/pulq.git",
+            "type": "vcs"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "agavi/agavi",
+                "version": "1.0.7",
+                "source": {
+                    "url": "http://svn.agavi.org/",
+                    "type": "svn",
+                    "reference": "tags/1.0.7/"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "PhpDebugToolbar/php-debug-toolbar",
+                "version": "1.6.0",
+                "source": {
+                    "url": "https://github.com/DracoBlue/PhpDebugToolbar.git",
+                    "type": "git",
+                    "reference": "8f829a838dc6dee69dbbc4a4af28295bf07abd0a"
+                },
+                "autoload": {
+                    "classmap": ["lib/agavi/", "PhpDebugToolbar.class.php"]
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "csswizardry/inuit.css",
+                "version": "5.0.1",
+                "source": {
+                    "url": "https://github.com/csswizardry/inuit.css.git",
+                    "type": "git",
+                    "reference": "aa49931763f8ef8b1bf7780108a84fc75a099a66"
+                }
+            }
+        }
+    ]
+}
