@@ -3,6 +3,12 @@
     xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" 
     xmlns="http://agavi.org/agavi/config/parts/settings/1.0"
     xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="%core.pulq_dir%/app/config/settings.xml"
+        xpointer="xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xpointer(/ae:configurations/*)">
+        <xi:fallback />
+    </xi:include>
+
     <ae:configuration>
         <!--
              Use this block to override the default system actions.
@@ -40,6 +46,7 @@
             <setting name="css">false</setting>
         </settings>
     </ae:configuration>
+
 </ae:configurations>
 
 

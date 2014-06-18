@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE namespaces [
+    <!ENTITY ael "xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xmlns(l=http://agavi.org/agavi/config/parts/logging/1.0)">
+]>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/logging/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <ae:configuration>
+    </ae:configuration>
+
+    <xi:include href="%core.pulq_dir%/app/config/logging.xml"
+        xpointer="xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xpointer(/ae:configurations/*)">
+        <xi:fallback />
+    </xi:include>
+
+</ae:configurations>

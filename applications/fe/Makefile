@@ -53,14 +53,17 @@ install-dependencies: install-composer
 	@if [ ! -f bin/composer.phar ]; then make install-composer; fi
 	@if [ -f vendor ]; then rm -rf vendor; fi
 	@php -d allow_url_fopen=1 bin/composer.phar install
-	-@bin/apply-patches
+	@make patches
 	@npm update
 
 update-dependencies: install-composer
 	@if [ -d vendor/agavi/agavi ]; then svn revert -R vendor/agavi/agavi/ || true ; fi
 	@php -d allow_url_fopen=1 bin/composer.phar update
-	-@bin/apply-patches
+	@make patches
 	@npm update
+
+patches:
+	-@vendor/berlinonline/pulq/bin/apply-patches
 
 environment:
 	@mkdir -p etc/local

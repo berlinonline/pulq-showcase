@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations 
+    xmlns="http://berlinonline.de/schemas/pulq/config/namespaces/1.0"
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" 
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <ae:configuration>
+        <namespaces>
+            <namespace name="Project">%core.project_dir%/app/lib</namespace>
+
+        </namespaces>
+    </ae:configuration>
+
+    <xi:include href="%core.pulq_dir%/app/config/namespaces.xml"
+        xpointer="xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xpointer(/ae:configurations/*)">
+        <xi:fallback />
+    </xi:include>
+
+    <xi:include href="%core.config_dir%/includes/namespaces.xml"
+        xpointer="xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xpointer(/ae:configurations/*)">
+        <xi:fallback />
+    </xi:include>
+</ae:configurations>
+
+

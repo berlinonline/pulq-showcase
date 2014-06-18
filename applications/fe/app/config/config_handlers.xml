@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+    xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+    xmlns="http://agavi.org/agavi/config/parts/config_handlers/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    parent="%core.system_config_dir%/config_handlers.xml">
+    <ae:configuration>
+        <!-- example config handler
+        <handlers>
+            <handler pattern="%core.config_dir%/namespaces.xml" class="Pulq\Agavi\ConfigHandler\NamespacesConfigHandler">
+                <validation>%core.config_dir%/xsd/namespaces.xsd</validation>
+            </handler>
+        </handlers>
+        -->
+    </ae:configuration>
+
+    <xi:include href="%core.pulq_dir%/app/config/config_handlers.xml"
+        xpointer="xmlns(ae=http://agavi.org/agavi/config/global/envelope/1.0) xpointer(/ae:configurations/*)">
+        <xi:fallback />
+    </xi:include>
+</ae:configurations>
