@@ -48,22 +48,23 @@ static: cc
 install-composer:
 	@if [ ! -f bin/composer.phar ]; then curl -s http://getcomposer.org/installer | php -d allow_url_fopen=1 -d date.timezone="Europe/Berlin" -- --install-dir=./bin; fi
 
-install-dependencies: install-composer
-	@if [ -d vendor/agavi/agavi ]; then svn revert -R vendor/agavi/agavi/ || true ; fi
+install-dependencies: install-composer revert-patches
 	@if [ ! -f bin/composer.phar ]; then make install-composer; fi
 	@if [ -f vendor ]; then rm -rf vendor; fi
 	@php -d allow_url_fopen=1 bin/composer.phar install
 	@make patches
 	@npm update
 
-update-dependencies: install-composer
-	@if [ -d vendor/agavi/agavi ]; then svn revert -R vendor/agavi/agavi/ || true ; fi
+update-dependencies: install-composer revert-patches
 	@php -d allow_url_fopen=1 bin/composer.phar update
 	@make patches
 	@npm update
 
 patches:
 	-@vendor/berlinonline/pulq/bin/apply-patches
+
+revert-patches:
+	@if [ -d vendor/agavi/agavi ]; then svn revert -R vendor/agavi/agavi/ || true ; fi
 
 environment:
 	@mkdir -p etc/local

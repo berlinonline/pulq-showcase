@@ -20,7 +20,8 @@
     "require": {
         "php": ">=5.3.3",
         "agavi/agavi": "1.0.*",
-        "berlinonline/pulq": "dev-pulq-vendor"
+        "berlinonline/pulq": "dev-pulq-vendor",
+        "csswizardry/inuit.css": "5.0.1"
     },
 
     "repositories": [
