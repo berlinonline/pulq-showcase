@@ -33,58 +33,58 @@ static: cc
 	@make css
 
 install-composer:
-	@if [ ! -f bin/composer.phar ]; then curl -s http://getcomposer.org/installer | php -d allow_url_fopen=1 -d date.timezone="Europe/Berlin" -- --install-dir=./bin; fi
+	if [ ! -f bin/composer.phar ]; then curl -s http://getcomposer.org/installer | php -d allow_url_fopen=1 -d date.timezone="Europe/Berlin" -- --install-dir=./bin; fi
 
 install-dependencies: install-composer revert-patches
-	@if [ ! -f bin/composer.phar ]; then make install-composer; fi
-	@if [ -f vendor ]; then rm -rf vendor; fi
-	@php -d allow_url_fopen=1 bin/composer.phar install
-	@make patches
-	@npm update
+	if [ ! -f bin/composer.phar ]; then make install-composer; fi
+	if [ -f vendor ]; then rm -rf vendor; fi
+	php -d allow_url_fopen=1 bin/composer.phar install
+	make patches
+	npm update
 
 update-dependencies: install-composer revert-patches
-	@php -d allow_url_fopen=1 bin/composer.phar update
-	@make patches
-	@npm update
+	php -d allow_url_fopen=1 bin/composer.phar update
+	make patches
+	npm update
 
-patches:
-	-@vendor/berlinonline/pulq/bin/apply-patches
+patches: revert-patches
+	vendor/berlinonline/pulq/bin/apply-patches
 
 revert-patches:
-	@if [ -d vendor/agavi/agavi ]; then svn revert -R vendor/agavi/agavi/ || true ; fi
+	vendor/berlinonline/pulq/bin/revert-patches
 
 environment:
-	@mkdir -p etc/local
-	@vendor/graste/environaut/bin/environaut.phar check --autoload-dir="app/lib"
+	mkdir -p etc/local
+	vendor/graste/environaut/bin/environaut.phar check --autoload-dir="app/lib"
 
 symlinks:
-	@bin/cli util.build_links --emergency
+	bin/cli util.build_links --emergency
 
 config:
-	-@rm app/config/includes/* > /dev/null
-	@bin/cli util.build_config --emergency
-	@make cc
+	rm app/config/includes/* > /dev/null
+	bin/cli util.build_config --emergency
+	make cc
 
 db:
-	@bin/cli util.create_db
+	bin/cli util.create_db
 
 reindex:
-	@bin/cli util.rebuild_idx
+	bin/cli util.rebuild_idx
 
 fixtures:
-	@bin/cli util.load_fixtures
+	bin/cli util.load_fixtures
 
 module:
-	@bin/cli util.build_module
+	bin/cli util.build_module
 
 action:
-	@bin/cli util.build_action
+	bin/cli util.build_action
 
 js:
-	@bin/cli util.requirejs
+	bin/cli util.requirejs
 
 css:
-	@bin/cli util.scss
+	bin/cli util.scss
 
 .PHONY: help install update symlinks db module action environment js css cc
 

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a763cbf808e4ce86b8a3a77dabff7b98",
+    "hash": "21cbaf1e17c2ca32d42a6a27e88930bd",
     "packages": [
         {
             "name": "PhpDebugToolbar/php-debug-toolbar",
@@ -87,20 +87,20 @@
         },
         {
             "name": "berlinonline/pulq",
-            "version": "dev-pulq-vendor",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/berlinonline/pulq.git",
-                "reference": "2f814aa185d0070396a75f843ea27ca0d6c00558"
+                "reference": "3991d04b7ef73e28795ea22282ab40706c84074b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/berlinonline/pulq/zipball/2f814aa185d0070396a75f843ea27ca0d6c00558",
-                "reference": "2f814aa185d0070396a75f843ea27ca0d6c00558",
+                "url": "https://api.github.com/repos/berlinonline/pulq/zipball/3991d04b7ef73e28795ea22282ab40706c84074b",
+                "reference": "3991d04b7ef73e28795ea22282ab40706c84074b",
                 "shasum": ""
             },
             "require": {
-                "agavi/agavi": "1.0.*",
+                "agavi/agavi": "1.0.7",
                 "csswizardry/inuit.css": "5.0.1",
                 "graste/environaut": "~0.3",
                 "michelf/php-markdown": "~1.0",
@@ -141,10 +141,10 @@
                 "mvc"
             ],
             "support": {
-                "source": "https://github.com/berlinonline/pulq/tree/pulq-vendor",
+                "source": "https://github.com/berlinonline/pulq/tree/master",
                 "issues": "https://github.com/berlinonline/pulq/issues"
             },
-            "time": "2014-06-27 09:39:11"
+            "time": "2014-06-27 11:26:05"
         },
         {
             "name": "csswizardry/inuit.css",
