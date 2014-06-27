@@ -5,3 +5,5 @@
 /auth.json
 /pub/static/style.css
 /pub/static/js/main-built.js
+/.environaut.cache
+/etc/local/consumer_shared_secret

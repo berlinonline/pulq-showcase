@@ -32,17 +32,17 @@ static: cc
 	@make js
 	@make css
 
-install-composer:
-	if [ ! -f bin/composer.phar ]; then curl -s http://getcomposer.org/installer | php -d allow_url_fopen=1 -d date.timezone="Europe/Berlin" -- --install-dir=./bin; fi
+bin/composer.phar:
+	curl -s http://getcomposer.org/installer | php -d allow_url_fopen=1 -d date.timezone="Europe/Berlin" -- --install-dir=./bin
 
-install-dependencies: install-composer revert-patches
+install-dependencies: bin/composer.phar revert-patches
 	if [ ! -f bin/composer.phar ]; then make install-composer; fi
 	if [ -f vendor ]; then rm -rf vendor; fi
 	php -d allow_url_fopen=1 bin/composer.phar install
 	make patches
 	npm update
 
-update-dependencies: install-composer revert-patches
+update-dependencies: bin/composer.phar revert-patches
 	php -d allow_url_fopen=1 bin/composer.phar update
 	make patches
 	npm update
@@ -55,7 +55,7 @@ revert-patches:
 
 environment:
 	mkdir -p etc/local
-	vendor/graste/environaut/bin/environaut.phar check --autoload-dir="app/lib"
+	vendor/graste/environaut/bin/environaut.phar check --autoload-dir="vendor/berlinonline/pulq/app/lib"
 
 symlinks:
 	bin/cli util.build_links --emergency
