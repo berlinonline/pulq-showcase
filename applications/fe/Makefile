@@ -51,7 +51,7 @@ patches: revert-patches
 	vendor/berlinonline/pulq/bin/apply-patches
 
 revert-patches:
-	vendor/berlinonline/pulq/bin/revert-patches
+	if [ -f vendor/berlinonline/pulq/bin/revert-patches ]; then vendor/berlinonline/pulq/bin/revert-patches; fi
 
 environment:
 	mkdir -p etc/local
