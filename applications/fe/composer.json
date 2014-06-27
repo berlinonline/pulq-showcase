@@ -1,8 +1,8 @@
 {
     "name": "berlinonline/pulq-showcase",
     "type": "project",
-    "description": "Agavi based framework for building frontend applications.",
-    "keywords": ["agavi", "mvc" , "frontend"],
+    "description": "Agavi based framework for building applications.",
+    "keywords": ["agavi", "mvc"],
     "homepage": "https://github.com/berlinonline/pulq",
     "license": "MIT",
     "authors": [
@@ -19,7 +19,7 @@
 
     "require": {
         "php": ">=5.3.3",
-        "agavi/agavi": "1.0.*",
+        "agavi/agavi": "dev-master#5cd8f3c5d4116e94fe20d0bea50396b4e255a17b as 1.0.7",
         "berlinonline/pulq": "dev-pulq-vendor",
         "csswizardry/inuit.css": "5.0.1"
     },
@@ -28,18 +28,6 @@
         {
             "url": "https://github.com/berlinonline/pulq.git",
             "type": "vcs"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "agavi/agavi",
-                "version": "1.0.7",
-                "source": {
-                    "url": "http://svn.agavi.org/",
-                    "type": "svn",
-                    "reference": "tags/1.0.7/"
-                }
-            }
         },
         {
             "type": "package",
