@@ -1,6 +1,6 @@
 cd <%= hosting_root %>
-git clone git@github.com:berlinonline/pulq-showcase.git showcase --recursive
-cd showcase/applications/fe
+git clone git@github.com:berlinonline/pulq-showcase.git <%= project_basedir %>
+cd <%= project_basedir %>/applications/fe
 make install
 make db
 make fixtures

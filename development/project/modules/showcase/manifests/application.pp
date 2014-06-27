@@ -1,6 +1,6 @@
 define showcase::application (
   $app_name = $title,
-  $app_docroot = '/home/vagrant/projects/showcase/applications/fe/pulq/pub'
+  $app_docroot = '/home/vagrant/projects/pulq-showcase/applications/fe/pulq/pub'
 ) {
 
   nginx::site { "${app_name}":

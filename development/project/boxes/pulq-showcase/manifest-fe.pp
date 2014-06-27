@@ -5,7 +5,7 @@ Package { provider => 'apt' }
 
 # set projects base directory, which is also exported to nfs.
 $hosting_root = "/home/vagrant/projects"
-$project_basedir = "${hosting_root}/showcase"
+$project_basedir = "${hosting_root}/pulq-showcase"
 
 # define our concrete box configuration
 class { 'boxes::devbox-php-elasticsearch': }
