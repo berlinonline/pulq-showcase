@@ -1,6 +1,5 @@
 PROJECT_ROOT=`pwd`
 
-
 help:
 	@bin/cli util.help --emergency
 
@@ -12,33 +11,21 @@ cc:
 	@rm -rf app/cache/*
 
 tail-logs:
-	@tail -f app/log/*.log
-
-new: cc
-	@make install-dependencies
-	@make environment
-	@make skeleton
-	@make symlinks
-	@make config
-	@make js
-	@make css
-	@make cc
+	@tail -f app/log/*.log /var/log/php/error.log
 
 install: cc
 	@make install-dependencies
 	@make environment
-	@make symlinks
-	@make config
-	@make js
-	@make css
-	@make cc
+	@make prepare
 
 update: cc
 	@make update-dependencies
+	@make prepare
+
+prepare:
 	@make symlinks
 	@make config
-	@make js
-	@make css
+	@make static
 	@make cc
 
 static: cc
@@ -70,10 +57,6 @@ environment:
 	@mkdir -p etc/local
 	@vendor/graste/environaut/bin/environaut.phar check --autoload-dir="app/lib"
 
-skeleton:
-	@bin/cli util.build_project --emergency
-	@make cc
-
 symlinks:
 	@bin/cli util.build_links --emergency
 
@@ -103,7 +86,7 @@ js:
 css:
 	@bin/cli util.scss
 
-.PHONY: help new install update skeleton symlinks db module action environment js css cc
+.PHONY: help install update symlinks db module action environment js css cc
 
 # vim: set ts=4 sw=4 noexpandtab:
 #

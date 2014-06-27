@@ -2,4 +2,6 @@
 /app/cache
 /.sass-cache
 /node_modules
-/.auth.json
+/auth.json
+/pub/static/style.css
+/pub/static/js/main-built.js

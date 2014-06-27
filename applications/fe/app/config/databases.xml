@@ -10,7 +10,7 @@
                 <ae:parameter name="transport">Http</ae:parameter>
                 <ae:parameter name="index">
                     <ae:parameter name="name">%core.project_prefix%_%core.environment%_fe</ae:parameter>
-                    <ae:parameter name="definition_file">%core.app_dir%/project/config/elasticsearch/default.index.json</ae:parameter>
+                    <ae:parameter name="definition_file">%core.app_dir%/config/elasticsearch/default.index.json</ae:parameter>
                     <ae:parameter name="types">
                         <ae:parameter name="asset">%core.app_dir%/config/elasticsearch/asset.mapping.json</ae:parameter>
                         <ae:parameter name="post">%core.module_dir%/Post/config/elasticsearch/post.mapping.json</ae:parameter>
