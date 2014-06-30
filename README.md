@@ -8,7 +8,7 @@ This is a demo/test/dev project for [berlinonline/pulq](https://github.com/berli
     git clone --depth=1 git@github.com:berlinonline/pulq-showcase.git <dirname>
     cd <dirname>
     rm -rf .git
-    git init
+    cd applications/fe
     make install
     
 This will give you a copy of this showcase project on which you can build your own.
