@@ -21,6 +21,7 @@
         "php": ">=5.3.3",
         "agavi/agavi": "dev-master#5cd8f3c5d4116e94fe20d0bea50396b4e255a17b as 1.0.7",
         "berlinonline/pulq": "dev-master",
+        "elasticsearch/elasticsearch": "~1.0",
         "csswizardry/inuit.css": "5.0.1"
     },
 
