@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b3a4f1c4cde79a7381cb2b762a24b4d0",
+    "hash": "5e0d4f0a52c9133c6c78b53d87d884b2",
     "packages": [
         {
             "name": "PhpDebugToolbar/php-debug-toolbar",
@@ -87,16 +87,16 @@
         },
         {
             "name": "berlinonline/pulq",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/berlinonline/pulq.git",
-                "reference": "d234bbce598e15dcbd1034b9e3dc50adbe04a8e6"
+                "reference": "20d584aa96807c8e3a38cc16e2ebe0701946e441"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/berlinonline/pulq/zipball/d234bbce598e15dcbd1034b9e3dc50adbe04a8e6",
-                "reference": "d234bbce598e15dcbd1034b9e3dc50adbe04a8e6",
+                "url": "https://api.github.com/repos/berlinonline/pulq/zipball/20d584aa96807c8e3a38cc16e2ebe0701946e441",
+                "reference": "20d584aa96807c8e3a38cc16e2ebe0701946e441",
                 "shasum": ""
             },
             "require": {
@@ -140,10 +140,10 @@
                 "mvc"
             ],
             "support": {
-                "source": "https://github.com/berlinonline/pulq/tree/master",
+                "source": "https://github.com/berlinonline/pulq/tree/1.0.0",
                 "issues": "https://github.com/berlinonline/pulq/issues"
             },
-            "time": "2014-06-30 12:16:57"
+            "time": "2014-06-30 13:27:02"
         },
         {
             "name": "csswizardry/inuit.css",
@@ -906,8 +906,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "agavi/agavi": 20,
-        "berlinonline/pulq": 20
+        "agavi/agavi": 20
     },
     "platform": {
         "php": ">=5.3.3"
