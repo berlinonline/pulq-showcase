@@ -91,12 +91,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/berlinonline/pulq.git",
-                "reference": "fc89743dd57abdfecf09405c01f831d2bb4ef53f"
+                "reference": "d234bbce598e15dcbd1034b9e3dc50adbe04a8e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/berlinonline/pulq/zipball/fc89743dd57abdfecf09405c01f831d2bb4ef53f",
-                "reference": "fc89743dd57abdfecf09405c01f831d2bb4ef53f",
+                "url": "https://api.github.com/repos/berlinonline/pulq/zipball/d234bbce598e15dcbd1034b9e3dc50adbe04a8e6",
+                "reference": "d234bbce598e15dcbd1034b9e3dc50adbe04a8e6",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,6 @@
                 "php": ">=5.3.3",
                 "phpdebugtoolbar/php-debug-toolbar": "1.6.*",
                 "psr/log": "1.0.0",
-                "ruflin/elastica": "0.90.*",
                 "symfony/console": "~2.4",
                 "twig/twig": "1.14.*",
                 "zendframework/zend-permissions-acl": "2.2.*"
@@ -144,7 +143,7 @@
                 "source": "https://github.com/berlinonline/pulq/tree/master",
                 "issues": "https://github.com/berlinonline/pulq/issues"
             },
-            "time": "2014-06-30 11:29:26"
+            "time": "2014-06-30 12:16:57"
         },
         {
             "name": "csswizardry/inuit.css",
@@ -638,58 +637,6 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "ruflin/elastica",
-            "version": "v0.90.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ruflin/Elastica.git",
-                "reference": "bb03eb21b96ea88fc6fefb97a7b2c2d7708fdfe2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/bb03eb21b96ea88fc6fefb97a7b2c2d7708fdfe2",
-                "reference": "bb03eb21b96ea88fc6fefb97a7b2c2d7708fdfe2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "munkie/elasticsearch-thrift-php": "1.4.*",
-                "psr/log": "~1.0",
-                "satooshi/php-coveralls": "dev-master"
-            },
-            "suggest": {
-                "monolog/monolog": "Logging request",
-                "munkie/elasticsearch-thrift-php": "Allow using thrift transport",
-                "psr/log": "for logging"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Elastica": "lib/",
-                    "Elastica\\Test": "test/lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Ruflin",
-                    "homepage": "http://ruflin.com/"
-                }
-            ],
-            "description": "Elasticsearch Client",
-            "homepage": "http://elastica.io/",
-            "keywords": [
-                "client",
-                "search"
-            ],
-            "time": "2014-02-02 07:44:29"
         },
         {
             "name": "sensiolabs/security-checker",
